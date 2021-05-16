@@ -124,6 +124,8 @@ namespace СourseWork
             return -2;
         }
 
+        //TODO: It's better to use DAO object instead of methods in Binary Heap
+
         private int findIndexMaxHeap(int ID)
         {
             if (maxList.Count < 1) return -1;
