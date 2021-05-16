@@ -83,9 +83,37 @@ namespace СourseWork
             }
         }
 
+        // Поиск ведется по минимальной пирамиде(O(nlogn))
         public T find(int ID)
         {
-            
+            if (minList.Count < 1) return null;
+
+            List<T> indexesToIterateOver = new List<T>();
+            indexesToIterateOver.Add(minList[0]);
+
+            while(indexesToIterateOver.Count > 0)
+            {
+                List<T> newIndexesToIterateOver = new List<T>();
+
+                foreach(T elem in indexesToIterateOver)
+                {
+                    if (elem.getID() == ID) return elem;
+                    else
+                    {
+                        int leftChildIndex = left(elem.getID());
+                        if (minList.Count - 1 >= leftChildIndex)
+                            if (minList[leftChildIndex].getID() <= ID) 
+                                newIndexesToIterateOver.Add(minList[leftChildIndex]);
+
+                        int rightChildIndex = right(elem.getID());
+                        if (minList.Count - 1 >= rightChildIndex)
+                            if (minList[rightChildIndex].getID() <= ID)
+                                newIndexesToIterateOver.Add(minList[rightChildIndex]);
+                    }
+                }
+
+                indexesToIterateOver = newIndexesToIterateOver;
+            }
 
             return null;
         }
