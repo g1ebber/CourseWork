@@ -87,7 +87,10 @@ namespace СourseWork
         public T find(int ID)
         {
             int index = findIndex(ID);
-            return minList[index];
+            if (index > -1)
+                return minList[index];
+
+            return null;
         }
 
         private int findIndex(int ID)
@@ -162,8 +165,13 @@ namespace СourseWork
 
         public void remove(int ID)
         {
-            minList.RemoveAt(findIndex(ID));
-            maxList.RemoveAt(findIndexMaxHeap(ID));
+            int indexMinHeap = findIndex(ID);
+            if (indexMinHeap > -1)
+                minList.RemoveAt(findIndex(ID));
+
+            int indexMaxHeap = findIndexMaxHeap(ID);
+            if (indexMaxHeap > -1) 
+                maxList.RemoveAt(findIndexMaxHeap(ID));
 
             buildHeap();
         }
