@@ -86,36 +86,84 @@ namespace СourseWork
         // Поиск ведется по минимальной пирамиде(O(nlogn))
         public T find(int ID)
         {
-            if (minList.Count < 1) return null;
+            int index = findIndex(ID);
+            return minList[index];
+        }
 
-            List<T> indexesToIterateOver = new List<T>();
-            indexesToIterateOver.Add(minList[0]);
+        private int findIndex(int ID)
+        {
+            if (minList.Count < 1) return -1;
 
-            while(indexesToIterateOver.Count > 0)
+            List<int> indexesToIterateOver = new List<int>();
+            indexesToIterateOver.Add(0);
+
+            while (indexesToIterateOver.Count > 0)
             {
-                List<T> newIndexesToIterateOver = new List<T>();
+                List<int> newIndexesToIterateOver = new List<int>();
 
-                foreach(T elem in indexesToIterateOver)
+                foreach (int index in indexesToIterateOver)
                 {
-                    if (elem.getID() == ID) return elem;
+                    if (minList[index].getID() == ID) return index;
                     else
                     {
-                        int leftChildIndex = left(elem.getID());
+                        int leftChildIndex = left(minList[index].getID());
                         if (minList.Count - 1 >= leftChildIndex)
-                            if (minList[leftChildIndex].getID() <= ID) 
-                                newIndexesToIterateOver.Add(minList[leftChildIndex]);
+                            if (minList[leftChildIndex].getID() <= ID)
+                                newIndexesToIterateOver.Add(leftChildIndex);
 
-                        int rightChildIndex = right(elem.getID());
+                        int rightChildIndex = right(minList[index].getID());
                         if (minList.Count - 1 >= rightChildIndex)
                             if (minList[rightChildIndex].getID() <= ID)
-                                newIndexesToIterateOver.Add(minList[rightChildIndex]);
+                                newIndexesToIterateOver.Add(rightChildIndex);
                     }
                 }
 
                 indexesToIterateOver = newIndexesToIterateOver;
             }
 
-            return null;
+            return -2;
+        }
+
+        private int findIndexMaxHeap(int ID)
+        {
+            if (maxList.Count < 1) return -1;
+
+            List<int> indexesToIterateOver = new List<int>();
+            indexesToIterateOver.Add(0);
+
+            while (indexesToIterateOver.Count > 0)
+            {
+                List<int> newIndexesToIterateOver = new List<int>();
+
+                foreach (int index in indexesToIterateOver)
+                {
+                    if (maxList[index].getID() == ID) return index;
+                    else
+                    {
+                        int leftChildIndex = left(maxList[index].getID());
+                        if (maxList.Count - 1 <= leftChildIndex)
+                            if (maxList[leftChildIndex].getID() <= ID)
+                                newIndexesToIterateOver.Add(leftChildIndex);
+
+                        int rightChildIndex = right(maxList[index].getID());
+                        if (maxList.Count - 1 <= rightChildIndex)
+                            if (maxList[rightChildIndex].getID() <= ID)
+                                newIndexesToIterateOver.Add(rightChildIndex);
+                    }
+                }
+
+                indexesToIterateOver = newIndexesToIterateOver;
+            }
+
+            return -2;
+        }
+
+        public void remove(int ID)
+        {
+            minList.RemoveAt(findIndex(ID));
+            maxList.RemoveAt(findIndexMaxHeap(ID));
+
+            buildHeap();
         }
 
 
