@@ -1,0 +1,35 @@
+C:\Users\Gleb\Desktop\СourseWork\obj\Debug\СourseWork.csprojAssemblyReference.cache
+C:\Users\Gleb\Desktop\СourseWork\obj\Debug\СourseWork.ChangeForm.resources
+C:\Users\Gleb\Desktop\СourseWork\obj\Debug\СourseWork.CreateForm.resources
+C:\Users\Gleb\Desktop\СourseWork\obj\Debug\СourseWork.MainForm.resources
+C:\Users\Gleb\Desktop\СourseWork\obj\Debug\СourseWork.Properties.Resources.resources
+C:\Users\Gleb\Desktop\СourseWork\obj\Debug\СourseWork.csproj.GenerateResource.cache
+C:\Users\Gleb\Desktop\СourseWork\obj\Debug\СourseWork.csproj.CoreCompileInputs.cache
+C:\Users\Gleb\Desktop\СourseWork\bin\Debug\СourseWork.exe.config
+C:\Users\Gleb\Desktop\СourseWork\bin\Debug\СourseWork.exe
+C:\Users\Gleb\Desktop\СourseWork\bin\Debug\СourseWork.pdb
+C:\Users\Gleb\Desktop\СourseWork\obj\Debug\СourseWork.exe
+C:\Users\Gleb\Desktop\СourseWork\obj\Debug\СourseWork.pdb
+C:\Users\student.STD\Desktop\СourseWork\bin\Debug\СourseWork.exe.config
+C:\Users\student.STD\Desktop\СourseWork\obj\Debug\СourseWork.exe
+C:\Users\student.STD\Desktop\СourseWork\obj\Debug\СourseWork.pdb
+C:\Users\student.STD\Desktop\СourseWork\bin\Debug\СourseWork.exe
+C:\Users\student.STD\Desktop\СourseWork\bin\Debug\СourseWork.pdb
+C:\Users\student.STD\Desktop\СourseWork\obj\Debug\СourseWork.csprojResolveAssemblyReference.cache
+C:\Users\student.STD\Desktop\СourseWork\obj\Debug\СourseWork.ChangeForm.resources
+C:\Users\student.STD\Desktop\СourseWork\obj\Debug\СourseWork.CreateForm.resources
+C:\Users\student.STD\Desktop\СourseWork\obj\Debug\СourseWork.MainForm.resources
+C:\Users\student.STD\Desktop\СourseWork\obj\Debug\СourseWork.Properties.Resources.resources
+C:\Users\student.STD\Desktop\СourseWork\obj\Debug\СourseWork.csproj.GenerateResource.Cache
+C:\Users\Gleb\Desktop\СourseWork — копия\bin\Debug\СourseWork.exe.config
+C:\Users\Gleb\Desktop\СourseWork — копия\bin\Debug\СourseWork.exe
+C:\Users\Gleb\Desktop\СourseWork — копия\bin\Debug\СourseWork.pdb
+C:\Users\Gleb\Desktop\СourseWork — копия\obj\Debug\СourseWork.csprojAssemblyReference.cache
+C:\Users\Gleb\Desktop\СourseWork — копия\obj\Debug\СourseWork.ChangeForm.resources
+C:\Users\Gleb\Desktop\СourseWork — копия\obj\Debug\СourseWork.CreateForm.resources
+C:\Users\Gleb\Desktop\СourseWork — копия\obj\Debug\СourseWork.MainForm.resources
+C:\Users\Gleb\Desktop\СourseWork — копия\obj\Debug\СourseWork.Properties.Resources.resources
+C:\Users\Gleb\Desktop\СourseWork — копия\obj\Debug\СourseWork.csproj.GenerateResource.cache
+C:\Users\Gleb\Desktop\СourseWork — копия\obj\Debug\СourseWork.csproj.CoreCompileInputs.cache
+C:\Users\Gleb\Desktop\СourseWork — копия\obj\Debug\СourseWork.exe
+C:\Users\Gleb\Desktop\СourseWork — копия\obj\Debug\СourseWork.pdb
