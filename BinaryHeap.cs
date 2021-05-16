@@ -83,11 +83,89 @@ namespace СourseWork
             }
         }
 
+        // Поиск ведется по минимальной пирамиде(O(nlogn))
         public T find(int ID)
         {
-            
+            int index = findIndex(ID);
+            return minList[index];
+        }
 
-            return null;
+        private int findIndex(int ID)
+        {
+            if (minList.Count < 1) return -1;
+
+            List<int> indexesToIterateOver = new List<int>();
+            indexesToIterateOver.Add(0);
+
+            while (indexesToIterateOver.Count > 0)
+            {
+                List<int> newIndexesToIterateOver = new List<int>();
+
+                foreach (int index in indexesToIterateOver)
+                {
+                    if (minList[index].getID() == ID) return index;
+                    else
+                    {
+                        int leftChildIndex = left(minList[index].getID());
+                        if (minList.Count - 1 >= leftChildIndex)
+                            if (minList[leftChildIndex].getID() <= ID)
+                                newIndexesToIterateOver.Add(leftChildIndex);
+
+                        int rightChildIndex = right(minList[index].getID());
+                        if (minList.Count - 1 >= rightChildIndex)
+                            if (minList[rightChildIndex].getID() <= ID)
+                                newIndexesToIterateOver.Add(rightChildIndex);
+                    }
+                }
+
+                indexesToIterateOver = newIndexesToIterateOver;
+            }
+
+            return -2;
+        }
+
+        //TODO: It's better to use DAO object instead of methods in Binary Heap
+
+        private int findIndexMaxHeap(int ID)
+        {
+            if (maxList.Count < 1) return -1;
+
+            List<int> indexesToIterateOver = new List<int>();
+            indexesToIterateOver.Add(0);
+
+            while (indexesToIterateOver.Count > 0)
+            {
+                List<int> newIndexesToIterateOver = new List<int>();
+
+                foreach (int index in indexesToIterateOver)
+                {
+                    if (maxList[index].getID() == ID) return index;
+                    else
+                    {
+                        int leftChildIndex = left(maxList[index].getID());
+                        if (maxList.Count - 1 <= leftChildIndex)
+                            if (maxList[leftChildIndex].getID() <= ID)
+                                newIndexesToIterateOver.Add(leftChildIndex);
+
+                        int rightChildIndex = right(maxList[index].getID());
+                        if (maxList.Count - 1 <= rightChildIndex)
+                            if (maxList[rightChildIndex].getID() <= ID)
+                                newIndexesToIterateOver.Add(rightChildIndex);
+                    }
+                }
+
+                indexesToIterateOver = newIndexesToIterateOver;
+            }
+
+            return -2;
+        }
+
+        public void remove(int ID)
+        {
+            minList.RemoveAt(findIndex(ID));
+            maxList.RemoveAt(findIndexMaxHeap(ID));
+
+            buildHeap();
         }
 
 

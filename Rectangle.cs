@@ -148,22 +148,22 @@ namespace СourseWork
         }
         public static bool operator <(Rectangle l, Rectangle f)
         {
-            return l.area() < f.area();
+            return l.ID < f.ID;
         }
 
         public static bool operator >(Rectangle l, Rectangle f)
         {
-            return l.area() > f.area();
+            return l.ID > f.ID;
         }
 
         public static bool operator <=(Rectangle l, Rectangle f)
         {
-            return l.area() <= f.area();
+            return l.ID <= f.ID;
         }
 
         public static bool operator >=(Rectangle l, Rectangle f)
         {
-            return l.area() >= f.area();
+            return l.ID >= f.ID;
         }
     }
 }
